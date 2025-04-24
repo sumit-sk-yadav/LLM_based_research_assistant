@@ -1,3 +1,5 @@
+jupyter
 langchain-community
 langchain
 langchain-ollama
+pypdf
