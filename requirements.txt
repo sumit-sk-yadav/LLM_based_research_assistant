@@ -3,3 +3,8 @@ langchain-community
 langchain
 langchain-ollama
 pypdf
+langchain-huggingface
+faiss-cpu
+chromadb
+transformers
+sentence-transformers

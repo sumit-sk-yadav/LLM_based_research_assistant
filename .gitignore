@@ -2,3 +2,4 @@ researcher
 data/*
 logs
 __pycache__
+embeddings/*
