@@ -6,7 +6,7 @@ from langchain.embeddings.base import Embeddings
 
 #create an embedding class
 class Embedder(Embeddings):
-    def __init__(self, model_name:str = "thenlpre/gte-base"):
+    def __init__(self, model_name:str = "thenlper/gte-small"):
         self.model = SentenceTransformer(model_name)
     
     def embed_documents(self, texts):

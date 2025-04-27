@@ -10,7 +10,7 @@ from . import logger
 
 def embed_and_store(documents:List[Document], 
                     storage_dir:str = "embeddings", 
-                    model_name:str = "thenlper/gte-base") -> Chroma:
+                    model_name:str = "thenlper/gte-small") -> Chroma:
     
     os.makedirs(storage_dir, exist_ok=True)
     hash_path = Path(storage_dir)/"hash.pkl"
