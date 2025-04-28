@@ -3,25 +3,6 @@
 An intelligent Retrieval-Augmented Generation (RAG) application designed to assist with studying documents.
 It loads PDFs, splits and embeds the content, stores embeddings using ChromaDB, and answers user queries using an LLM (Llama 3) enhanced with retrieval capabilities.
 
-'''
-LLM_BASED_RESEARCH_ASSISTANT/
-├── data/                   # Raw PDF files
-├── embeddings/             # Stored vector database (ChromaDB)
-├── scripts/
-│   ├── loader.py           # Logic to load PDFs into memory
-│   ├── splitter.py         # Chunking long text into manageable pieces
-│   ├── embedding.py         # Embedding generation using Sentence Transformers
-│   ├── vector_store.py     # Embedding storage and retrieval (Chroma)
-│   ├── retriever.py        # Retrieving relevant documents
-│   ├── rag_chain.py        # RAG pipeline combining retriever + LLM
-│   └── utils.py            # Helper functions and configurations
-├── app/
-│   └── main.py             # CLI Application Entry Point
-├── .gitignore
-├── requirements.txt
-└── README.md
-'''
-
 ⚙️ How It Works
 
 run ''' python -m app.main '''
