@@ -1,6 +1,6 @@
 from pathlib import Path
 from langchain_community.document_loaders import PyPDFLoader
-from . import logger
+
 
 
 async def load_all_pdf_files(folder_path: str) -> list:
@@ -15,9 +15,7 @@ async def load_all_pdf_files(folder_path: str) -> list:
     pages = []
     all_pdf_files = list(Path(folder_path).rglob("*.pdf"))# search all pdf files in folder
     if not all_pdf_files:
-        logger.warning(f" No PDF file/'s found in {folder_path}")
-    
-    logger.info(f"Found {len(all_pdf_files)} PDF file/'s in {folder_path}")
+        print(f" No PDF file/'s found in {folder_path}")
     
     for pdf_file in all_pdf_files:
         try:
@@ -25,7 +23,6 @@ async def load_all_pdf_files(folder_path: str) -> list:
             async for page in loader.alazy_load():
                 pages.append(page)
         except Exception as e:
-            logger.error(e)
+            raise e
     
-    logger.info(f'Finished loading PDF files from {folder_path}. Total pages loaded: {len(pages)}')
     return pages

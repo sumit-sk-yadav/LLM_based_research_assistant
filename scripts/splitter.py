@@ -1,4 +1,3 @@
-from . import logger
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 def text_splitter(pages:list[str], c_size: int = 1000, c_overlap: int = 50) -> list:
@@ -22,12 +21,8 @@ def text_splitter(pages:list[str], c_size: int = 1000, c_overlap: int = 50) -> l
                                                     strip_whitespace = True)
             
             chunks = splitter.split_documents(pages)
-            
-            logger.info(f'Split {len(pages)} pages into chunks of size {c_size}')
         
         except Exception as e:
-            logger.error(e)
-            
             raise e
-    logger.info(f'Finished splitting of {len(pages)} pages Successfully')
+        
     return chunks
