@@ -3,7 +3,7 @@
 An intelligent Retrieval-Augmented Generation (RAG) application designed to assist with studying documents.
 It loads PDFs, splits and embeds the content, stores embeddings using ChromaDB, and answers user queries using an LLM (Llama 3) enhanced with retrieval capabilities.
 
-
+'''
 LLM_BASED_RESEARCH_ASSISTANT/
 ├── data/                   # Raw PDF files
 ├── embeddings/             # Stored vector database (ChromaDB)
@@ -20,6 +20,7 @@ LLM_BASED_RESEARCH_ASSISTANT/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+'''
 
 ⚙️ How It Works
 
