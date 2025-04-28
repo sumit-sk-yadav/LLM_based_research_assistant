@@ -1,4 +1,4 @@
-📚 Study Assistant
+📚 LLM Based Research Assistant
 
 An intelligent Retrieval-Augmented Generation (RAG) application designed to assist with studying documents.
 It loads PDFs, splits and embeds the content, stores embeddings using ChromaDB, and answers user queries using an LLM (Llama 3) enhanced with retrieval capabilities.
