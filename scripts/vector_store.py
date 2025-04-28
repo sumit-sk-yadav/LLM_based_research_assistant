@@ -39,3 +39,13 @@ def embed_and_store(documents:List[Document],
         pickle.dump(present_hash, f)
     
     return vectorstore
+
+def load_vectorstore(
+    persist_dir: str = "embeddings",
+    model_name: str = "thenlper/gte-small"
+) -> Chroma:
+    return Chroma(
+        persist_directory=persist_dir,
+        embedding_function=Embedder(model_name),
+        client_settings=Settings(persist_directory=persist_dir, anonymized_telemetry=False)
+    )
