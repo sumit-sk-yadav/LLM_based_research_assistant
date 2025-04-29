@@ -56,8 +56,6 @@ This will:
 
     Tool-Enhanced RAG: Integrate external tools (e.g., calculators, search APIs).
 
-    Streaming Outputs: Display LLM answers as they are generated.
-
     Web UI: Interactive front-end with Streamlit or FastAPI.
 
     Multi-Model Support: Switch between different LLMs easily (Mistral, GPT-NeoX, etc.).
